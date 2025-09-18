@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza rendelés form </title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>S2 -es fincsi mincsi pizza</h1>
-    <form>
-        <label> Név:  
+    <h1 style="text-align: center;">S2 -es fincsi mincsi pizza</h1>
+    <form method="post" action="https://httpbin.org/post">
+        <label> Név:
             <input type="text" name="Name" placeholder="Pl.: Magyar Péter" maxlength="20" required>
         </label>
         <br>
-        <label> Telefonszám:  
+        <label> Telefonszám:
             <input type="text" name="phone" placeholder="Pl.: +3620590553" maxlength="10" required>
         </label>
         <br>
-        <label> E-mail:  
+        <label> Lakcím: 
+            <input type="text" name="lakcím" placeholder="Pl.:1025, Budapest, Kazinczy utca 7 " required>
+        </label>
+        <br>
+        <label> E-mail:
             <input type="email" name="email" placeholder="Pl.: someone@gmail.com" maxlength="30">
         </label>
 
         <fieldset>
-        <legend> Pizza méret</legend>
-        <label>   
-            <input type="radio" name="size" required> Kicsi(16x16)
-        </label>
-        <br>
-        <label>   
-            <input type="radio" name="size" required> Közepes(32x32)
-        </label>
-        <br>
-        <label>   
-            <input type="radio" name="size" required> Nagy(58x58)
-        </label>
+            <legend> Pizza méret</legend>
+            <label>
+                <input type="radio" name="size" required value="Kicsi"> Kicsi(16x16)
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="size" required value="Közepes"> Közepes(32x32)
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="size" required value="Nagy"> Nagy(58x58)
+            </label>
         </fieldset>
+
+        <fieldset>
+            <label>
+                <input type="checkbox" name="feltét" value="Bacon"> Bacon
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="feltét" value="Kukorica" > Kukorica
+            </label>
+            <br>    
+            <label>
+                <input type="checkbox" name="feltét" value="Gomba"> Gomba
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="feltét" value="Titkos" > Titkos házi specialitás
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Megjegyzés</legend>
+            <textarea name="Megjegyzes" id="Megjegyzes_mezo" maxlength="200"
+                placeholder="Bármilyen megjegyzés és kívánság megbírálása" cols="100" rows="5"></textarea>
+
+        </fieldset>
+        <div style="text-align: center; border: 2px solid grey; padding: 20px;">
+        <button type="reset">Újra</button>
+        <button type="submit">Elküldés</button>
+        </div>
     </form>
-    
+
 </body>
+
 </html>

@@ -1,0 +1,14 @@
+body{
+    background-color: palevioletred;
+}
+button{
+    text-align: center;
+}
+form{
+    max-width: 1000px;
+    padding: 15px;
+}
+
+label{
+    display: block;
+}
