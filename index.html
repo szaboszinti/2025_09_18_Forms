@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza rendelés form </title>
+</head>
+<body>
+    <h1>S2 -es fincsi mincsi pizza</h1>
+    <form>
+        <label> Név:  
+            <input type="text" name="Name" placeholder="Pl.: Magyar Péter" maxlength="20" required>
+        </label>
+        <br>
+        <label> Telefonszám:  
+            <input type="text" name="phone" placeholder="Pl.: +3620590553" maxlength="10" required>
+        </label>
+        <br>
+        <label> E-mail:  
+            <input type="email" name="email" placeholder="Pl.: someone@gmail.com" maxlength="30">
+        </label>
+
+        <fieldset>
+        <legend> Pizza méret</legend>
+        <label>   
+            <input type="radio" name="size" required> Kicsi(16x16)
+        </label>
+        <br>
+        <label>   
+            <input type="radio" name="size" required> Közepes(32x32)
+        </label>
+        <br>
+        <label>   
+            <input type="radio" name="size" required> Nagy(58x58)
+        </label>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
